@@ -13,7 +13,7 @@ node{
             // If using Go modules, ensure the dependencies are up to date
             sh 'go mod tidy'
         }
-    }
+    
 
     stage('build'){
         echo "${b}"
