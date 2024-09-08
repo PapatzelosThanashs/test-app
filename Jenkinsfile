@@ -7,7 +7,8 @@ node{
 
     stage('test'){
 
-            sh 'sleep 60'
+            // Temporarily set the PATH environment variable
+           sh 'PATH=$PATH:/home/jenkins/go/bin'
        
             // Verify Go installation
             sh 'go version'
