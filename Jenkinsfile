@@ -9,7 +9,7 @@ node{
 
             // Temporarily set the PATH environment variable
            sh 'PATH=$PATH:/home/jenkins/go/bin'
-           sh 'sleep 120'
+           sh 'sleep 300'
        
             // Verify Go installation
             sh 'go version'
