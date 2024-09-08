@@ -4,14 +4,14 @@ node{
     def c="im into deploy stage"
 
     stage('test'){
-        echo ${a}
+        echo "${a}"
     }
 
     stage('build'){
-        echo ${b}
+        echo "${b}"
     }
 
     stage('deploy'){
-        echo ${c}
+        echo "${c}"
     }
 }
