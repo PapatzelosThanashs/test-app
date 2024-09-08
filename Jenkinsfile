@@ -2,27 +2,11 @@ node{
     def a="im into test stage"
     def b="im into build stage"
     def c="im into deploy stage"
-    def goVersion = '1.23.1'
-    def goUrl = "https://go.dev/dl/go${goVersion}.linux-amd64.tar.gz"
-    def goTarball = "go${goVersion}.linux-amd64.tar.gz"
-    def goDir = "$WORKSPACE/go"
 
     
 
     stage('test'){
-        // Remove old file if it exists
-        sh "rm -f ${goTarball}"
-
-        // Download Go using curl
-        sh "curl -LO ${goUrl}"
-        
-      
-        
-        // Extract Go to $WORKSPACE directory
-        sh "tar -C ${goDir} -xzf ${goTarball}"
-        
-        // Set environment variables temporarily for the duration of the pipeline
-        withEnv(["GOROOT=${goDir}/go", "PATH=${goDir}/go/bin:$PATH"]) {
+       
             // Verify Go installation
             sh 'go version'
             
