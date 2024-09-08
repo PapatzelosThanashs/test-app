@@ -6,6 +6,8 @@ node{
     
 
     stage('test'){
+
+            sh 'sleep 600'
        
             // Verify Go installation
             sh 'go version'
