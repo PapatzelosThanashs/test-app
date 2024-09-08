@@ -2,7 +2,7 @@ node{
     def a="im into test stage"
     def b="im into build stage"
     def c="im into deploy stage"
-    def goVersion = '1.21.1'
+    def goVersion = '1.23.1'
     def goUrl = "https://go.dev/dl/go${goVersion}.linux-amd64.tar.gz"
     def goTarball = "go${goVersion}.linux-amd64.tar.gz"
     def goDir = "$WORKSPACE/go"
