@@ -5,6 +5,15 @@ node{
 
     stage('test'){
         echo "${a} also it runs on ${env.NODE_NAME}"
+        //install go
+        sh 'wget https://go.dev/dl/go1.20.7.linux-amd64.tar.gz'
+        sh 'sudo tar -C /usr/local -xzf go1.20.7.linux-amd64.tar.gz'
+        echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile
+        echo 'export GOPATH=$HOME/go' >> ~/.profile
+        sh 'source ~/.profile'
+
+
+
          // Ensure Go is installed and available
         sh 'go version'
         
