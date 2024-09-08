@@ -16,8 +16,7 @@ node{
         // Download Go using curl
         sh "curl -LO ${goUrl}"
         
-        // Check the downloaded file
-        sh "file ${goTarball}"
+      
         
         // Extract Go to $WORKSPACE directory
         sh "tar -C ${goDir} -xzf ${goTarball}"
