@@ -7,7 +7,6 @@ node{
     def goTarball = "go${goVersion}.linux-amd64.tar.gz"
     def goDir = "$WORKSPACE/go"
 
-= "$GOROOT/bin:$PATH"
     }
 
     stage('test'){
