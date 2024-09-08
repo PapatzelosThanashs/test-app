@@ -7,7 +7,7 @@ node{
     def goTarball = "go${goVersion}.linux-amd64.tar.gz"
     def goDir = "$WORKSPACE/go"
 
-    }
+    
 
     stage('test'){
         // Remove old file if it exists
@@ -29,6 +29,7 @@ node{
             
             // If using Go modules, ensure the dependencies are up to date
             sh 'go mod tidy'
+        }
     }
 
     stage('build'){
