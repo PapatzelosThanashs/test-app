@@ -2,6 +2,8 @@ node{
     def a="im into test stage"
     def b="im into build stage"
     def c="im into deploy stage"
+    def goUrl = "https://go.dev/dl/go1.21.1.linux-amd64.tar.gz"
+    def goTarball = "go1.21.1.linux-amd64.tar.gz"
 
     environment {
         GOROOT = "/usr/local/go"
@@ -12,8 +14,8 @@ node{
     stage('test'){
         echo "${a} also it runs on ${env.NODE_NAME}"
         //install go
-        sh 'wget https://go.dev/dl/go1.20.7.linux-amd64.tar.gz'
-        sh 'tar -C /usr/local -xzf go1.20.7.linux-amd64.tar.gz'
+        sh "curl -O ${goUrl}"
+        sh 'tar -C /usr/local -xzf go1.21.1.linux-amd64.tar.gz'
 
 
 
