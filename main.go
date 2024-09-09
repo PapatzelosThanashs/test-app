@@ -23,7 +23,7 @@ var db *sql.DB
 func main() {
 	var err error
 	// Open a database connection
-	db, err := sql.Open("mysql", "root:example@tcp(service-db.jenkins.svc.cluster.local:3306)/test_db")
+	db, err := sql.Open("mysql", "root:example@tcp(10.108.5.31:3306)/test_db")
 	if err != nil {
 		log.Fatal(err)
 	}
