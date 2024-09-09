@@ -13,6 +13,8 @@ node{
        
             // Verify Go installation
             sh 'go version'
+
+            sh 'go mod init github.com/PapatzelosThanashs/test-app'
             
             // If using Go modules, ensure the dependencies are up to date
             sh 'go mod tidy'
