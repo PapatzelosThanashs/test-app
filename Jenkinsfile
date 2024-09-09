@@ -7,9 +7,9 @@ node{
 
     stage('test'){
 
-            // Temporarily set the PATH environment variable
-           sh 'PATH=$PATH:/home/jenkins/go/bin'
-           sh 'sleep 300'
+
+           // Fetch the GitHub repository
+            git branch: 'master', url: 'https://github.com/PapatzelosThanashs/test-app.git'
        
             // Verify Go installation
             sh 'go version'
