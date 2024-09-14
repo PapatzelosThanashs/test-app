@@ -20,7 +20,7 @@ node{
         // Run the build process, e.g., using Maven or Gradle
         //sh 'mvn clean install'
         echo 'Build phase!'
-        sh 'go run main.go'
+       
                 
     }
 
