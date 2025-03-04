@@ -1,3 +1,4 @@
+@Library('jenkins_lib_shared') _
 node{
     def a="im into test stage"
     def b="im into build stage"
@@ -21,7 +22,7 @@ node{
         //sh 'mvn clean install'
         echo 'Build phase!'
        
-                
+        example('hi from library')        
     }
 
     stage('deploy'){
