@@ -1,4 +1,4 @@
-@Library('jenkins_lib_shared') _
+@Library('jenkins_lib_shared@master') _
 node{
     def a="im into test stage"
     def b="im into build stage"
