@@ -11,7 +11,7 @@ node{
            // Fetch the GitHub repository
             git branch: 'master', url: 'https://github.com/PapatzelosThanashs/test-app.git'
        
-           sh 'kubectl get pods -n jenkins'
+           //sh 'kubectl get pods -n jenkins'
         }
     
 
